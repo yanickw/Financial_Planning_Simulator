@@ -1,3 +1,4 @@
+# Financial Planning Simulator
 *FINANCIAL PLANNING SIMULATOR* is a financial planning application utilizing the power of API's to analyse different probability over time using a diversity of available portfolio which are run through a Monte Carlo Simulation model for forcast.
 
 ## Requirements
@@ -86,17 +87,22 @@ Series process to clean both dataframe for analysis.
 3.  Parse the json file to get the price of thes elected cryptocurrency .
 4.  Calculate the Financial value of the Portfolio.
 
-### 3. Analyze the Data
+### 3. Update Prices of Stocks and Bonds of Portfolio Using Alpaca SDK.
 
-After getting the summary statistic and visualize the data we then aim our focus on the analysis of specific dates to run an arbitrage profits simulation.
+1.  Review the total number of shares held.
+2.  Set the variables for the Alpaca API and secret keys and API Call.
+3.  Get the current closing prices for the stocks and bonds by using the Alpaca  `get_bars`  function and store them as variables..
+4.  Calculate the value, in US dollars, of the current amount of shares in each of the stock and bond portions of the portfolio.
 
-### 4. Calculate the Arbitrage Profits
+### 4. Evaluate the Emergency Fund
+In this section, you’ll use the valuations for the cryptocurrency wallet and for the stock and bond portions of the portfolio to determine if the credit union member has enough savings to build an emergency fund into their financial plan.
 
-First order of business is to mesure the arbitrage spread. Followed by the spread returns which leads us to find the positive returns exceeding 1% minimum threshold that we need to cover our costs. The following steps calculates the potential arbitrage profits on each days. Finally, we total the cumulative sum using the  `.cumsum`  and visual graph of the results.
-
+### 5. Create a Financial Planner for Retirement
+1. Create the Monte Carlo Simulation useing the MCForecastTools library for the Portfolio.
+2. Analyze the Retirement Portfolio Forecasts using the current value of only the stock and bond portion of the portfolio and the summary statistics generated from the Monte Carlo simulation
 ----------
 
-## [](https://github.com/yanickw/crypto_arbitrage#contributors)Contributors
+## Contributors
 
 This application originated from a Berkeley Bootcamp.
 
@@ -106,7 +112,7 @@ I can also be reached on  [LinkedIn](https://www.linkedin.com/in/yanickwilisky/)
 
 ----------
 
-## [](https://github.com/yanickw/crypto_arbitrage#license)License
+## License
 
 MIT License
 
@@ -117,3 +123,4 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
